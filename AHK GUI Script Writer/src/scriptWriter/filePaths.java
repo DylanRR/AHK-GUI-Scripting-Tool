@@ -7,14 +7,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 
 public class filePaths {
-	public static String ahk2ExePath;
+	public static String pathOfAhk2Exe;
+	public static String pathOfScripts;
 	
-	public static ArrayList<String> readFilePath() {
+	public static void readFilePath() {
 		ArrayList < String > paths = new ArrayList < String > ();
 		File f = new File("Path.txt");
 	    if (!f.exists()) {
@@ -28,23 +26,21 @@ public class filePaths {
 	
 	    try (BufferedReader br = new BufferedReader(new FileReader(f))) { //Try-Catch
             String line = new String();
-            	Pattern SearchPattern = Pattern.compile("\".*\"");
-            	Matcher MatchString = SearchPattern.matcher(line);
-            	while(MatchString.find()) {
-            		System.out.println("Matching String" + MatchString.group());
+            while ((line = br.readLine()) != null) {
+            	if (! line.startsWith("|")) {
+            	int indexOf = line.indexOf('"');
+            	String pathBuilder = line.substring(indexOf +1, line.length()-1);
+            	paths.add(pathBuilder);
             	}
-            	
+            }           	
         } catch (FileNotFoundException e) { // Catch File Not Found
             e.printStackTrace();
         } catch (IOException e) { // Catch IOExeption
             e.printStackTrace();
         }
 	
-	return paths;
-	}
-	
-	public static void main(String[] args) {
-		readFilePath();
-		System.out.println(ahk2ExePath);
+	    pathOfAhk2Exe = paths.get(0);
+	    pathOfScripts = paths.get(1);
+	    
 	}
 }
