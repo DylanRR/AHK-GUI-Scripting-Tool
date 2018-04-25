@@ -18,6 +18,7 @@ public class ahkToExeCompiler {
 			 writeToFile("@echo off");
 			 writeToFile("cd " + filePaths.pathOfAhk2Exe);
 			 writeToFile("Ahk2Exe.exe /in \"" + filePaths.pathOfScripts + nameOfAhk + ".ahk"); // TODO prompt user for Script name and pass here
-			 writeToScriptsList.writeToCompiledScripts(nameOfAhk + ".ahk");
+			 writeToScriptsList.writeToCompiledScripts(nameOfAhk);
+			 writeToScriptsList.pergeFromNonCompiledScripts(nameOfAhk);
 		 }
 }
