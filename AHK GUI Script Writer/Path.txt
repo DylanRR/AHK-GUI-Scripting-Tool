@@ -1,0 +1,2 @@
+Location of Ahk2Exe.exe: "AutoHotkey/Compiler/Ahk2Exe.exe"
+Location of Scripts: "Auto-Generated-Scripts/"
