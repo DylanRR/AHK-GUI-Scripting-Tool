@@ -11,6 +11,8 @@ import java.util.ArrayList;
 public class filePaths {
 	public static String pathOfAhk2Exe;
 	public static String pathOfScripts;
+	public static String pathOfCompiledScripts_List;
+	public static String pathOfNonCompiledScripts_List;
 	
 	public static void readFilePath() {
 		ArrayList < String > paths = new ArrayList < String > ();
@@ -41,6 +43,8 @@ public class filePaths {
 	
 	    pathOfAhk2Exe = paths.get(0);
 	    pathOfScripts = paths.get(1);
+	    pathOfCompiledScripts_List = paths.get(2);
+	    pathOfNonCompiledScripts_List = paths.get(3);
 	    
 	}
 }

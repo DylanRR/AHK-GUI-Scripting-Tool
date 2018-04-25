@@ -1,3 +1,5 @@
 | testing "Test123"
 Location of Ahk2Exe.exe: "AutoHotkey/Compiler"
-Location of Scripts: "Auto-Generated-Scripts/"
+Location of Temp Scripts: "Auto-Generated-Scripts/"
+Location of Compiled-Scripts.txt: "AutoHotkey\Compiler\Auto-Generated-Scripts\Compiled-Scripts.txt"
+Location of Non-Compiled-Scripts.txt: "AutoHotkey\Compiler\Auto-Generated-Scripts\Non-Compiled-Scripts.txt"
