@@ -13,10 +13,11 @@ public class ahkToExeCompiler {
 		        fw.close(); //Close out txt file
 		    }
 		 
-		 public static void createBatFile(String nameOfAhk) throws IOException {
+		 public static void compileAhk(String nameOfAhk) throws IOException {
 			 filePaths.readFilePath();
 			 writeToFile("@echo off");
 			 writeToFile("cd " + filePaths.pathOfAhk2Exe);
 			 writeToFile("Ahk2Exe.exe /in \"" + filePaths.pathOfScripts + nameOfAhk + ".ahk"); // TODO prompt user for Script name and pass here
+			 writeToScriptsList.writeToCompiledScripts(nameOfAhk + ".ahk");
 		 }
 }
