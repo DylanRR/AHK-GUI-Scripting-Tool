@@ -1,3 +1,3 @@
+@echo off
 cd AutoHotkey/Compiler
-Ahk2Exe.exe /in "Auto-Generated-Scripts/Test1.ahk"
-pause
+Ahk2Exe.exe /in "Auto-Generated-Scripts/Test1.ahk

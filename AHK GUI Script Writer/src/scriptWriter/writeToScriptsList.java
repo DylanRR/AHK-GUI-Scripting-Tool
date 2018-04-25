@@ -16,6 +16,7 @@ public class writeToScriptsList {
         FileWriter fw = new FileWriter(f, false); //New FileWriter
         fw.write(s + System.getProperty("line.separator")); //Use FileWriter to wite the param<String> to txt file
         fw.close(); //Close out txt file
+        pergeFromNonCompiledScripts(s);
     }
 	
 	public static void writeToNonCompiledScripts(String s) throws IOException {
