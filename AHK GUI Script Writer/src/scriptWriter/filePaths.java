@@ -7,7 +7,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-
+/**
+ *@author mothership
+ *@desc Class to read system file paths from paths.exe and set the paths as public variables to pull from
+ *@param pathOfAhk2Exe system path to ahk to exe converter for scripts
+ *@param pathOfScripts system path to Compiled Scripts
+ *@param pathOfCompiledScripts_List system path to a list of compiled scripts
+ *@param pathOfNonCompiledScripts_List system path to a list of un-compiled scripts
+ *@param pathOfCompileBatch system path to bat file to run ahk to exe converter for scripts
+ */
 public class filePaths {
 	public static String pathOfAhk2Exe;
 	public static String pathOfScripts;
@@ -15,6 +23,11 @@ public class filePaths {
 	public static String pathOfNonCompiledScripts_List;
 	public static String pathOfCompileBatch;
 	
+	/**
+	 * Reads path.txt which contains all system paths that are used
+	 * @catch FileNotFoundException for path.txt
+	 * @catch IOException for bufferwriter writing comment
+	 */
 	public static void readFilePath() {
 		ArrayList < String > paths = new ArrayList < String > ();
 		File f = new File("Path.txt");
